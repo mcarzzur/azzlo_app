@@ -7,7 +7,6 @@ class AuthService {
   /// Intenta logear con username y password
   /// Retorna un Map con los datos del usuario si login correcto
   /// Retorna null si login incorrecto o error
-  /// prueba
   static Future<Map<String, dynamic>?> login({
     required String username,
     required String password,
