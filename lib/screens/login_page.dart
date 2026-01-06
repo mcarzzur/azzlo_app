@@ -46,10 +46,17 @@ class _Login extends State<LoginPage> {
         child: Form(
             key: loginForm,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TextFormField(
+                SizedBox(
+                  width: 250,
+                  child: TextFormField(
                   controller: userController,
-                  decoration: const InputDecoration(hintText: "Nombre de usuario"),
+                  decoration: const InputDecoration(
+                      hintText: "Nombre de usuario",
+                      border: OutlineInputBorder(),
+                  ),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
                       return "Este campo es obligatorio";
@@ -57,18 +64,30 @@ class _Login extends State<LoginPage> {
                     return null;
                   },
                 ),
-                TextFormField(
-                  controller: passwordController,
-                  decoration: const InputDecoration(hintText: "Contraseña"),
-                  validator: (value) {
-                    if (value == null || value.trim().isEmpty) {
-                      return "Este campo es obligatorio";
-                    }
-                    return null;
-                  },
                 ),
-                ElevatedButton(onPressed: login, child: Text("Enviar")
+
+                const SizedBox(height: 20),
+
+                SizedBox(
+                  width: 250,
+                  child: TextFormField(
+                    controller: passwordController,
+                    decoration: const InputDecoration(
+                        hintText: "Contraseña",
+                        border: OutlineInputBorder(),
+                    ),
+                    validator: (value) {
+                      if (value == null || value.trim().isEmpty) {
+                        return "Este campo es obligatorio";
+                      }
+                      return null;
+                    },
+                  ),
                 ),
+
+                const SizedBox(height: 20),
+
+                ElevatedButton(onPressed: login, child: Text("Enviar")),
               ],
             ),
         ),
