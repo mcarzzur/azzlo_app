@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import '../core/styles/app_colors.dart';
 import '../services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
@@ -42,6 +44,7 @@ class _Login extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: Form(
             key: loginForm,
@@ -49,13 +52,52 @@ class _Login extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+
+                SvgPicture.asset(
+                  "assets/images/azzlo-logo.svg",
+                  height: 150,
+                  colorFilter: const ColorFilter.mode(
+                      AppColors.primary,
+                      BlendMode.srcIn),
+                ),
+
                 SizedBox(
                   width: 250,
                   child: TextFormField(
                   controller: userController,
-                  decoration: const InputDecoration(
-                      hintText: "Nombre de usuario",
-                      border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: AppColors.surface,
+                    hintText: "Nombre de usuario",
+
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                        color: AppColors.primaryLight
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: AppColors.primary,
+                        width: 2
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+
+                    errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: AppColors.error
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    
+                    focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            color: AppColors.primary
+                        ),
+                        borderRadius: BorderRadius.circular(12)
+                    ),
                   ),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
@@ -72,9 +114,40 @@ class _Login extends State<LoginPage> {
                   width: 250,
                   child: TextFormField(
                     controller: passwordController,
-                    decoration: const InputDecoration(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: AppColors.surface,
                         hintText: "Contraseña",
-                        border: OutlineInputBorder(),
+
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              color: AppColors.primaryLight
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: AppColors.primary,
+                              width: 2
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: AppColors.error
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: AppColors.primary
+                          ),
+                          borderRadius: BorderRadius.circular(12)
+                        ),
                     ),
                     validator: (value) {
                       if (value == null || value.trim().isEmpty) {
@@ -87,7 +160,18 @@ class _Login extends State<LoginPage> {
 
                 const SizedBox(height: 20),
 
-                ElevatedButton(onPressed: login, child: Text("Enviar")),
+                ElevatedButton(
+                    onPressed: login,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primary
+                    ),
+                    child: Text(
+                      "Enviar",
+                      style: TextStyle(
+                        color: AppColors.textPrimary,
+                      ),
+                    ),
+                ),
               ],
             ),
         ),

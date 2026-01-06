@@ -5,6 +5,7 @@ version: 1.0.0+1
 environment:
   sdk: ^3.10.1
 dependencies:
+  flutter_svg: ^2.0.9
   flutter:
     sdk: flutter
 
@@ -18,5 +19,7 @@ dev_dependencies:
   flutter_secure_storage: ^9.0.0
 
 flutter:
+  assets:
+    - assets/images/
   uses-material-design: true
 
