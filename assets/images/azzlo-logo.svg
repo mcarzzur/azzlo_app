@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1024"
+   height="512"
+    viewBox="332 0 280 512"
+    version="1.1"
+   id="svg3"
+   sodipodi:docname="azzlo-logo.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5761719"
+     inkscape:cx="512.31722"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .azzlo-blue { fill:#0A66B2; }
+      .azzlo-text { font-family: 'Poppins', 'Montserrat', 'Inter', sans-serif;
+                   font-weight:600; font-size:120px; letter-spacing:3px; }
+    </style>
+  </defs>
+  <!-- Monograma A dinámica -->
+  <g
+     transform="translate(332.20818,58.731103)"
+     id="g3">
+    <!-- Diagonal izquierda -->
+    <path
+       class="azzlo-blue"
+       d="M 0,360 140,0 150,20 10,360 Z"
+       id="path1" />
+    <!-- Diagonal derecha -->
+    <path
+       class="azzlo-blue"
+       d="M 280,360 140,0 130,20 270,360 Z"
+       id="path2" />
+    <!-- Barra central curva -->
+    <path
+       class="azzlo-blue"
+       d="m 100,220 q 40,-40 80,0 v 20 q -40,-40 -80,0 z"
+       id="path3" />
+  </g>
+  <!-- Wordmark -->
+</svg>
